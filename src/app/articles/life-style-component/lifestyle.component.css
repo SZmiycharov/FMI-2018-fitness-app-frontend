@@ -1,0 +1,24 @@
+a {
+    color:black;
+    font-family: 'PT Sans', Arial, sans-serif;
+    padding:7px;
+  }
+
+  a:hover{
+    text-decoration: none!important; 
+    color: #46ADC6 !important;
+    cursor: pointer!important;
+  }
+.from-top{
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+.col-padding{
+    padding-left:50px;
+}
+.content {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px
+}

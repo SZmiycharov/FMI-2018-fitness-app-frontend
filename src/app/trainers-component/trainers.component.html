@@ -1,0 +1,66 @@
+<div class="content from-top content">
+
+    <h1>We have some of the greatest trainers. </h1>
+    <h2>Choose the best option for you!</h2>
+</div>
+<div class="from-top">
+    <div *ngFor="let trainer of trainers ">
+        <div class="row">
+            <div class="col-md-4 ">
+                <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+            </div>
+            <div class="col-md-4 trainers">
+                <div class="row ">
+                    <div class="col-m-12 ">Name: {{trainer.name}}</div>
+                </div>
+                <div class="row ">
+                    <div class="col-m-12 ">
+                        Phone: {{trainer.phone}}
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-m-12 ">
+                        Age: {{trainer.age}}
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-m-12 ">
+                        Experience: {{trainer.experience}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-m-12">
+                        <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Contact {{trainer.name}}</button>
+                        <div class="modal fade" id="myModal" role="dialog">
+                          <div class="modal-dialog">
+                       
+                            <div class="modal-content">
+                              <div class="modal-header"> 
+                                 <h4 class="modal-title">Send message</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">
+                                   <input placeholder="Type here...">
+                              </div>
+                              <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Send</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+            </div>
+            <div class="col-md-4 ">
+                    <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+                </div>
+        </div>
+
+
+    </div>
+</div>
