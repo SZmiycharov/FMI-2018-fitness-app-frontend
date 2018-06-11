@@ -16,7 +16,7 @@
             <span>
                 <b>Age</b>: {{user.age}}</span>
             <span>
-                <b>Gender</b>: Male</span>
+                <b>Gender</b>: {{user.gender}}</span>
             <span>
                 <b>Height</b>: {{user.height}}</span>
             <span>
@@ -69,9 +69,8 @@
     <div class="row program">
        
             <div *ngFor="let workout of workouts " class="training-padding">
-                <b>04.02.2018</b>
                 <br>
-                <b>Day A</b>
+                <b>Training Day</b>
                     <div *ngFor="let exercise of workout.exercises">
         
                             <div class="row">
@@ -101,7 +100,9 @@
                     </div>
                 </div>
         </div>
-
+        <br>
+        <br>  <br>
+        <br>
         <button class="btn">Last Month</button>
         <br>
         <br>

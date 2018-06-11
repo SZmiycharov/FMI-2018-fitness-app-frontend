@@ -9,6 +9,7 @@ export class User {
     public weight:number;
     public height:number;
     public role:string;
+    public gender:string;
 
 
     constructor(email, password) { 

@@ -27,14 +27,7 @@
 
             <span>
                 <b>Gender</b>:<br>
-                <div class="radio">
-                    <label>
-                        <input  type="radio" name="optradio">Male</label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optradio">Female</label>
-                </div>
+             <input [(ngModel)]="user.gender"  type="text">
             </span>
             <span>
                 <b>Height</b>:<br> <input [(ngModel)]="user.height"  type="number"></span>
@@ -45,7 +38,10 @@
             <span>
                 <b>Last Name</b>:<br>  <input [(ngModel)]="user.lastName" type="text"></span>
             <span>
-                <b>Are you trainer?</b><br> <input type="checkbox">Yes
+                <b>Are you trainer?</b><br> <input type="checkbox"
+                name="option"
+                value="{{option.value}}"
+                [(ngModel)]="option.checked"/>No
             </span>
             <br>
             <br>

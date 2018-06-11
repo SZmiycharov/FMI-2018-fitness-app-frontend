@@ -8,7 +8,7 @@ import { Trainer } from '../model/trainer';
   styleUrls: ['./trainers.component.css']
 })
 export class TrainersComponent implements OnInit{
- 
+  message:string;
   trainers: Trainer[];
   constructor( private _service:AuthenticationService) {
     this.trainers = [new Trainer("Ivan", "08912912",25,3),
@@ -19,7 +19,8 @@ export class TrainersComponent implements OnInit{
   }
 
   contactTrainer(){
-    
+    alert("This trainer is offline! \n You will get answer as soon as possible.");
+    this.message ="";
   }
 
   ngOnInit() {

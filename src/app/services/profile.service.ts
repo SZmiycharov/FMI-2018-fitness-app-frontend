@@ -14,10 +14,11 @@ export class ProfileService {
         let user =  new User('','');
         user.age = Number(localStorage.getItem("age"));
         user.weight = Number(localStorage.getItem("weight"));
-         user.height = Number(localStorage.getItem("height"));
+        user.height = Number(localStorage.getItem("height"));
         user.firstName = localStorage.getItem("firstName");
         user.lastName = localStorage.getItem("lastName");
         user.email = localStorage.getItem("email");
+        user.gender = localStorage.getItem("gender");
         return user;
     }
 
@@ -28,6 +29,8 @@ export class ProfileService {
         localStorage.setItem('firstName', user.firstName);
         localStorage.setItem('lastName', user.lastName);
         localStorage.setItem('email', user.email);
+        localStorage.setItem('gender', user.gender);
+        localStorage.setItem('role', user.role);
     }
 
     

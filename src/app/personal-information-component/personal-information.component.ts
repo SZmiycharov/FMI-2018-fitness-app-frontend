@@ -20,15 +20,8 @@ export class PersonalInformationComponent implements OnInit  {
   constructor( private _service:AuthenticationService, private profileService:ProfileService) {
     this.date = new Date();
   
-    this.workouts= [new Workout(), new Workout(), new Workout(), new Workout()];
-    this.workouts[0].exercises = [ new Exercise("Squat",12,4,90),new Exercise("Bench",12,4,90),
-    new Exercise("RMD",12,4,90)];
-    this.workouts[1].exercises = [ new Exercise("Squat",12,4,92),new Exercise("Bench",12,4,80),
-    new Exercise("RMD",12,4,95)];
-    this.workouts[2].exercises = [ new Exercise("Squat",12,4,92),new Exercise("Bench",12,4,80),
-    new Exercise("RMD",12,4,95)];
-    this.workouts[3].exercises = [ new Exercise("Squat",12,4,92),new Exercise("Bench",12,4,80),
-    new Exercise("RMD",12,4,95)];
+    this.workouts= [new Workout(), new Workout(), new Workout(), new Workout(),new Workout(),new Workout(),new Workout()];
+    
     this.isActiveProfile = true;
   }
 
@@ -42,7 +35,7 @@ export class PersonalInformationComponent implements OnInit  {
   setIsActive(){
     this.isActiveProfile = false;
   }
-  
+
   goToProfile() {     
     this.isActiveProfile = true;
     console.log(this.isActiveProfile);

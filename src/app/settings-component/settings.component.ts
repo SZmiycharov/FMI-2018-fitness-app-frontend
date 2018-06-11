@@ -11,14 +11,21 @@ import { Component, OnInit } from '@angular/core';
 export class SettingsComponent  implements OnInit {
   public ageActivated:boolean;
   public user:User;
-
+  option = {name:'Trainer', value:'1', checked:true};
   constructor( private _service:AuthenticationService, private profileService: ProfileService) {
   this.ageActivated = false;
 
   }
   
   changeInformation(){
+    if(this.option.checked == false) {
+      console.log("trainer")
+      this.user.role ="trainer";
+    } else {
+      this.user.role ="client";
+    }
     this.profileService.setUser(this.user);
+    location.reload();
   }
 
   ngOnInit() {
