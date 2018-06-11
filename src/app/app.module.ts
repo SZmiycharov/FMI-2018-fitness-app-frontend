@@ -8,7 +8,7 @@ import { LoginComponent } from './login-component/login.component';
 import { AuthenticationService } from './services/login.service';
 import { ClientsComponent } from './clients-component/clients.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PersonalInformationComponent } from './personal-information-component/personal-information.component';
@@ -16,10 +16,11 @@ import { WorkComponent } from './work-component/work.component';
 import { TechnologiesComponent } from './technologies-component/technologies.component';
 import { TrainersComponent } from './trainers-component/trainers.component';
 import { SettingsComponent } from './settings-component/settings.component';
-
-
+import { EditProgramModal } from './modals/edit-program-modal';
+import { ModalService } from './modals/modal-service';
 import { AppRoutingModule }     from './app-routing.module';
 import { RegistrationComponent } from './registration-component/registration.component';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,14 +36,19 @@ import { RegistrationComponent } from './registration-component/registration.com
     LifeStyleComponent,
     WorkoutComponent,
     FoodComponent, 
-    EditProgramComponent
+    EditProgramComponent,
+    EditProgramModal
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
-  providers: [AuthenticationService, ProfileService, WorkoutService],
+  entryComponents: [
+    EditProgramModal
+],
+  providers: [AuthenticationService, ProfileService, WorkoutService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

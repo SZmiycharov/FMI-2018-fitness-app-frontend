@@ -16,6 +16,7 @@ export class PersonalInformationComponent implements OnInit  {
   date:Date;
   user:User;
   isStarted:boolean;
+  isActiveProfile:boolean;
   constructor( private _service:AuthenticationService, private profileService:ProfileService) {
     this.date = new Date();
   
@@ -28,12 +29,23 @@ export class PersonalInformationComponent implements OnInit  {
     new Exercise("RMD",12,4,95)];
     this.workouts[3].exercises = [ new Exercise("Squat",12,4,92),new Exercise("Bench",12,4,80),
     new Exercise("RMD",12,4,95)];
-
+    this.isActiveProfile = true;
   }
 
 
   ngOnInit() {
     this.user = this.profileService.getUserFromLocalStorage();
     this._service.checkCredentials();
+
   }
+
+  setIsActive(){
+    this.isActiveProfile = false;
+  }
+  
+  goToProfile() {     
+    this.isActiveProfile = true;
+    console.log(this.isActiveProfile);
+
+}
 }
