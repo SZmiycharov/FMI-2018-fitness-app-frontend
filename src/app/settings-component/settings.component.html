@@ -8,14 +8,26 @@
     <div class="row">
         <div class="col-md-4">
             <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+            <form action="/action_page.php">
+                <input type="file" name="pic" accept="image/*">
+
+              </form>
+            <br>
+            <br>
+            <br>
+            <form action="/action_page.php">
+            <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+           
+                <input type="file" name="pic" accept="image/*">
+              </form>
             <br>
             <br>
             <br>
             <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
-            <br>
-            <br>
-            <br>
-            <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+            <form action="/action_page.php">
+                <input type="file" name="pic" accept="image/*">
+      
+              </form>
         </div>
         <div class="col-md-4" class="block-container">
 
@@ -43,6 +55,7 @@
                 value="{{option.value}}"
                 [(ngModel)]="option.checked"/>No
             </span>
+            
             <br>
             <br>
             <input type="submit" (click)="changeInformation()"  class="btn waves-effect waves-light" name="submit"  value="Change">

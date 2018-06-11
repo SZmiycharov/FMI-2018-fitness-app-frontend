@@ -28,6 +28,7 @@
                         Experience: {{trainer.experience}}
                     </div>
                 </div>
+               
                 <div class="row">
                     <div class="col-m-12">
                         <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Contact {{trainer.name}}</button>
@@ -46,10 +47,14 @@
                                     <button type="button" class="btn btn-default" (click)=" contactTrainer()" data-dismiss="modal">Send</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
+                              Rate Trainer:
+                              <input type="range" min="1" max="7" value="50" class="slider" [(ngModel)]="timesPerWeek" id="myRange">
+                            <br>
                             </div>
                             
                           </div>
                         </div>
+                        
                     </div>
                 </div>
 
