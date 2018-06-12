@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PersonalInformationComponent } from './personal-information-component/personal-information.component';
 import { WorkComponent } from './work-component/work.component';
 import { TechnologiesComponent } from './technologies-component/technologies.component';
+import { SleepComponent } from './sleep-component/sleep.component';
 import { TrainersComponent } from './trainers-component/trainers.component';
 import { SettingsComponent } from './settings-component/settings.component';
  
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'personal-information', component: PersonalInformationComponent },
   { path: 'work', component: WorkComponent },
   { path: 'technologies', component: TechnologiesComponent},
+  { path: 'sleep', component: SleepComponent},
   { path: 'trainers', component: TrainersComponent},
   { path: 'setings', component: SettingsComponent},
   { path: 'clients', component: ClientsComponent},

@@ -21,6 +21,7 @@ import { ModalService } from './modals/modal-service';
 import { AppRoutingModule }     from './app-routing.module';
 import { RegistrationComponent } from './registration-component/registration.component';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SleepComponent } from './sleep-component/sleep.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PersonalInformationComponent,
     WorkComponent,
     TechnologiesComponent,
+    SleepComponent,
     TrainersComponent,
     SettingsComponent, 
     ClientsComponent,
