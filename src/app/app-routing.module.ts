@@ -1,3 +1,9 @@
+import { Life1Component } from './articles/life-style-component/new-article/life1.component';
+import { Life2Component } from './articles/life-style-component/new-article.1/life2.component';
+import { Life3Component } from './articles/life-style-component/new-article.2/life3.component';
+import { Food3Component } from './articles/food-component/new-article.2/food3.component';
+import { Food2Component } from './articles/food-component/new-article.1/food2.component';
+import { Food1Component } from './articles/food-component/new-article/food1.component';
 import { EditProgramComponent } from './edit-program-component/edit-program.component';
 import { WorkoutComponent } from './articles/workout-component/workout.component';
 import { FoodComponent } from './articles/food-component/food.component';
@@ -27,7 +33,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'registration', component: RegistrationComponent},
   { path: 'lifestyle', component: LifeStyleComponent},
+  { path: 'life1', component: Life1Component},
+  { path: 'life2', component: Life2Component},
+  { path: 'life3', component: Life3Component},
   { path: 'food', component: FoodComponent},
+  { path: 'food1', component: Food1Component},
+  { path: 'food2', component: Food2Component},
+  { path: 'food3', component: Food3Component},
   { path: 'workout', component: WorkoutComponent},
   { path: 'edit-program', component: EditProgramComponent}
 ];

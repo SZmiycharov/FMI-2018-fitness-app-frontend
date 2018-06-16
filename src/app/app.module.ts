@@ -1,3 +1,9 @@
+import { Life1Component } from './articles/life-style-component/new-article/life1.component';
+import { Life2Component } from './articles/life-style-component/new-article.1/life2.component';
+import { Life3Component } from './articles/life-style-component/new-article.2/life3.component';
+import { Food3Component } from './articles/food-component/new-article.2/food3.component';
+import { Food2Component } from './articles/food-component/new-article.1/food2.component';
+import { Food1Component } from './articles/food-component/new-article/food1.component';
 import { EditProgramComponent } from './edit-program-component/edit-program.component';
 import { WorkoutService } from './services/workout.service';
 import { ProfileService } from './services/profile.service';
@@ -36,8 +42,14 @@ import { SleepComponent } from './sleep-component/sleep.component';
     LoginComponent, 
     RegistrationComponent,
     LifeStyleComponent,
+    Life1Component,
+    Life2Component,
+    Life3Component,
     WorkoutComponent,
     FoodComponent, 
+    Food1Component,
+    Food2Component,
+    Food3Component,
     EditProgramComponent,
     EditProgramModal
   ],
