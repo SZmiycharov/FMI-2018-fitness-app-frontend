@@ -1,9 +1,31 @@
 <div class="content from-top content">
-
     <h1>We have some of the greatest trainers. </h1>
     <h2>Choose the best option for you!</h2>
 </div>
+
 <div class="from-top">
+    <form id="formoid" action="http://127.0.0.1:1948/translate" title="" method="post">
+        <div class="row">
+            <div class="input-field col-sm-12">
+                <label for="translation">Text</label>
+                <textarea required [(ngModel)]="translation_text" name="translation" id="translation" class="validate"></textarea>
+            </div>
+            <div class="input-field col-sm-12">
+                <label for="translate_to">Translate to</label>
+                <select [(ngModel)]="translate_to_language" name="translate_to" id="translate_to">
+                    <option value="de">German</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <input type="submit" (click)="translateText()" class="btn waves-effect waves-light" name="submit" [disabled]="!isValidData()" value="Translate">
+        </div>
+    </form>
+
+    <div id="translated_text" class="col-m-12"></div>
+
     <div *ngFor="let trainer of trainers ">
         <div class="row">
             <div class="col-md-4 ">
