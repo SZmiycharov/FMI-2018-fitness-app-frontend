@@ -12,7 +12,6 @@ import { Sleep } from '../model/sleep';
  
  export class SleepComponent implements OnInit {  
     public sleep = new Sleep();
-    public sleepAnalysisMessage = '';
  
     constructor(private _router: Router,  private _service:AuthenticationService, private profileService: ProfileService) {}
  
@@ -21,26 +20,29 @@ import { Sleep } from '../model/sleep';
     }
 
     sleepAnalyze() {
-      let differenceSleep = this.sleep.wakeUp - this.sleep.fallAsleep;
+      // let differenceSleep = this.sleep.wakeUp - this.sleep.fallAsleep;
 
-      if(differenceSleep < 0)
-      {
-        differenceSleep += 24;
-      }
+      // if(differenceSleep < 0)
+      // {
+      //   differenceSleep += 24;
+      // }
 
-      if(differenceSleep < 6)
-      {
-        this.sleepAnalysisMessage = "Sleep more, definitely!";
-      }
-      else if (differenceSleep < 10)
-      {
-        this.sleepAnalysisMessage = "Perfect sleep time!";
-      }
-      else
-      {
-        this.sleepAnalysisMessage = "Stop sleeping, you lazy person!!";
-      }
-       
+      // if(differenceSleep < 6)
+      // {
+      //   this.sleepAnalysisMessage = "Sleep more, definitely!";
+      // }
+      // else if (differenceSleep < 10)
+      // {
+      //   this.sleepAnalysisMessage = "Perfect sleep time!";
+      // }
+      // else
+      // {
+      //   this.sleepAnalysisMessage = "Stop sleeping, you lazy person!!";
+      // }
+       this.profileService.calculateSleepInfo(this.sleep).subscribe((sleep: Sleep) =>{
+         console.log(sleep);
+         this.sleep = sleep;
+       });
     }
     
 

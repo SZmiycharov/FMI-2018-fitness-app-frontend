@@ -3,6 +3,7 @@ import {Injectable} from '@angular/core';
 import {RouterModule, Routes, Router} from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { Sleep } from '../model/sleep';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -12,7 +13,7 @@ const httpOptions = {
 export class ProfileService {
 
     usersCount:number;
-    private url = environment.devUrl + '/calculate' ;  // URL to web api
+    private url = environment.devUrl ;  // URL to web api
 
   constructor(
     private _router: Router, 
@@ -43,8 +44,12 @@ export class ProfileService {
     }
 
     calculateUserInformation(user:User) {
-        return this.http.post<User>(this.url, user);
+        return this.http.post<User>(this.url + '/calculate', user);
     }
+
+    calculateSleepInfo(sleep: Sleep) {
+        return this.http.post<Sleep>(this.url + '/calculateSleepInfo', sleep);
+    } 
 
     
 
