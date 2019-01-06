@@ -1,13 +1,22 @@
 import { User } from '../model/user';
 import {Injectable} from '@angular/core';
 import {RouterModule, Routes, Router} from '@angular/router';
- 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+
+const httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
 @Injectable()
 export class ProfileService {
 
     usersCount:number;
+    private url = environment.devUrl + '/calculate' ;  // URL to web api
+
   constructor(
-    private _router: Router){
+    private _router: Router, 
+    private http: HttpClient){
     }
 
     getUserFromLocalStorage():User {
@@ -31,6 +40,10 @@ export class ProfileService {
         localStorage.setItem('email', user.email);
         localStorage.setItem('gender', user.gender);
         localStorage.setItem('role', user.role);
+    }
+
+    calculateUserInformation(user:User) {
+        return this.http.post<User>(this.url, user);
     }
 
     
