@@ -28,6 +28,7 @@ import { AppRoutingModule }     from './app-routing.module';
 import { RegistrationComponent } from './registration-component/registration.component';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SleepComponent } from './sleep-component/sleep.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { SleepComponent } from './sleep-component/sleep.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     NgbModule.forRoot()
   ],
   entryComponents: [

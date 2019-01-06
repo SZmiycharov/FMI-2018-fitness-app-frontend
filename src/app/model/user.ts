@@ -10,7 +10,10 @@ export class User {
     public height:number;
     public role:string;
     public gender:string;
-
+    public calories:number;
+    public proteins:number;
+    public carbs:number;
+    public fats:number;
 
     constructor(email, password) { 
         this.email = email;
