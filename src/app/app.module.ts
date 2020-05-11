@@ -28,6 +28,7 @@ import { AppRoutingModule }     from './app-routing.module';
 import { RegistrationComponent } from './registration-component/registration.component';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SleepComponent } from './sleep-component/sleep.component';
+import { StepsComponent } from './steps-component/steps.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     WorkComponent,
     TechnologiesComponent,
     SleepComponent,
+    StepsComponent,
     TrainersComponent,
     SettingsComponent, 
     ClientsComponent,

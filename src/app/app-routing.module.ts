@@ -18,6 +18,7 @@ import { PersonalInformationComponent } from './personal-information-component/p
 import { WorkComponent } from './work-component/work.component';
 import { TechnologiesComponent } from './technologies-component/technologies.component';
 import { SleepComponent } from './sleep-component/sleep.component';
+import { StepsComponent } from './steps-component/steps.component';
 import { TrainersComponent } from './trainers-component/trainers.component';
 import { SettingsComponent } from './settings-component/settings.component';
  
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'work', component: WorkComponent },
   { path: 'technologies', component: TechnologiesComponent},
   { path: 'sleep', component: SleepComponent},
+  { path: 'steps', component: StepsComponent},
   { path: 'trainers', component: TrainersComponent},
   { path: 'setings', component: SettingsComponent},
   { path: 'clients', component: ClientsComponent},

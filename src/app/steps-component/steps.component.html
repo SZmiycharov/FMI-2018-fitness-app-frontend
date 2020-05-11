@@ -1,0 +1,31 @@
+<div>
+        <div class="title">
+                <h1>Steps Analysis</h1>
+        </div>
+
+        <div class="row">
+                <div class="col-md-4">
+                        <form>
+                                <div class="row">
+                                        <div class="input-field col-sm-12">
+                                                <input required [(ngModel)]="steps.count" id="count" name="count" type="number" class="validate">
+                                                <label for="count">Steps count today</label>
+                                        </div>
+                                </div>
+
+                                <input [disabled]="!isValidData()" type="submit" (click)="stepsAnalyze()" class="btn waves-effect waves-light" name="submit"
+                                        value="Analyze My Steps">
+
+                                <h1 id="steps-analysis-text"></h1>
+                        </form>
+
+                </div>
+                <div class="col-md-4">
+                        <img class="rounded" src="../assets/steps.jpg" alt="New York" width="550" height="400">
+                </div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+</div>
